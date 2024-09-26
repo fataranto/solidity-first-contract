@@ -1,10 +1,36 @@
 {
 	"compiler": {
-		"version": "0.8.4+commit.c7e474f2"
+		"version": "0.8.26+commit.8a97fa7a"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
+			{
+				"inputs": [],
+				"name": "address1",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "address2",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
 			{
 				"inputs": [],
 				"name": "b",
@@ -16,6 +42,85 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "boolean_true",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "d",
+				"outputs": [
+					{
+						"internalType": "int8",
+						"name": "",
+						"type": "int8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "displayState",
+				"outputs": [
+					{
+						"internalType": "enum variables_modifiers.options",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "hashing",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "str_public",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "turnOff",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "turnOn",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -34,7 +139,7 @@
 		"compilationTarget": {
 			"contracts/2_variables_modifiers.sol": "variables_modifiers"
 		},
-		"evmVersion": "istanbul",
+		"evmVersion": "cancun",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -47,11 +152,11 @@
 	},
 	"sources": {
 		"contracts/2_variables_modifiers.sol": {
-			"keccak256": "0x73f2d791dc512e3ab2f2dc2e972ff24ad5fc361c7f83b29495e188fc59d3c91f",
+			"keccak256": "0x9095c05d8522bbca9d4c5cd08568b687ec347d2d6b4bf3089a27826422ce95a9",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ccda5ab984c5f981bc62854967e2fbe696550d8109f8a8476abfb3ea97117af8",
-				"dweb:/ipfs/QmTbGGYSJG9KjSGCTfu7DY6An5LXKjPVYqyc8fiSPqZKUY"
+				"bzz-raw://ecdcdb16dced4bf53b15c13d19c0b8531634d65177997ee7a446b5a16aa8d033",
+				"dweb:/ipfs/QmUV2ZCZNZEYYWcJrPJjZ5Er2nYMFgtHwpJxf3aw5hdWr6"
 			]
 		}
 	},

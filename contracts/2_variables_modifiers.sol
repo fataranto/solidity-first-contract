@@ -34,7 +34,7 @@ contract variables_modifiers {
 
     //Variable address
     address my_address;
-    address public address1 = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
+    address public address1 = 0x7EF2e0048f5bAeDe046f6BF797943daF4ED8CB47;
     address public address2 = msg.sender;
 
     //Variable de enumeración

@@ -30,7 +30,9 @@ contract variables_modifiers {
     bytes1 byte_1; //antes se podía usar "byte" o "bytes1" indistintamente, ahora solo bytes1
 
     //Algoritmo de hash
-    bytes32 public hashing = keccak256(abi.encodePacked("Hola", "Fabi"));
+    bytes32 public hashing = keccak256(abi.encodePacked("Hello World", uint(10), 0x7EF2e0048f5bAeDe046f6BF797943daF4ED8CB47, msg.sender)); //puedo enviar cualquier dato, strings, números (declarándolos previamente), direcciones, etc.
+    bytes32 public hashing_sha256 = sha256(abi.encodePacked("Hello World"));
+    bytes20 public hashing_ripemd160 = ripemd160(abi.encodePacked("Hello World"));
 
     //Variable address
     address my_address;

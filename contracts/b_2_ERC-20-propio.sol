@@ -71,7 +71,7 @@ abstract contract ERC20 is IERC20 {
     }
 
     function allowance(address owner, address spender) public virtual override returns (uint256){
-        _allowances[owner][spender];
+        return _allowances[owner][spender];
     }
 
     function approve(address spender, uint256) public virtual override returns (bool){
@@ -89,6 +89,26 @@ abstract contract ERC20 is IERC20 {
         _transfer(from, to, amount);
         return true;
     }
+
+    function increaseAllowance(address spender, uint256 addedValue) public virtual returns (bool){
+        address owner = msg.sender;
+        _approve(owner, spender, _allowances[owner][spender] + addedValue);
+        return true;
+    }
+
+    function dereaseAllowance(address spender, uint256 substractedValue) public virtual returns (bool){
+        address owner = msg.sender;
+        uint256 currentAllowance = _allowances[owner][spender];
+        require(currentAllowance >= substractedValue, "ERC20: decreased allowance below zero");
+        _approve(owner, spender, _allowances[owner][spender] + addedValue);
+        unchecked {
+            _approve(owner, spender, currentAllowance - substractedValue);
+        }
+        return true;
+    }
+
+
+
     
 
 

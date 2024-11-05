@@ -135,7 +135,7 @@ abstract contract ERC20 is IERC20 {
 
     function _burn(address account, uint256 amount) internal virtual {
         require(account != address(0), "ERC20: burn from the zero account");
-        _beforeTokenTransfer(account, address(0), amnount);
+        _beforeTokenTransfer(account, address(0), amount);
         uint256 accountBalance = _balances[account];
         require(accountBalance >= amount, "ERC20: burn amount exceeds balance");
         unchecked {
@@ -170,4 +170,16 @@ abstract contract ERC20 is IERC20 {
             }
         }
     }
+
+    function _beforeTokenTransfer(
+        address from,
+        address to,
+        uint256 amount
+    ) internal virtual {}
+
+    function _afterTokenTransfer(
+        address from,
+        address to,
+        uint256 amount
+    ) internal virtual {}
 }

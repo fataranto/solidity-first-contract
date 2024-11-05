@@ -145,4 +145,29 @@ abstract contract ERC20 is IERC20 {
         emit Transfer(account, address(0), amount);
         _afterTokenTransfer(account, address(0), amount);
     }
+
+    function _approve(
+        address owner,
+        address spender,
+        address amount
+    ) internal virtual {
+        require(owner != address(0), "ERC20: approve from the zero address");
+        require(spender != address(0), "ERC20: approve to the zero address");
+        _allowances[owner][spender] = amount;
+        emit Approval(owner, spender, amount);
+    }
+
+    function _spendAllowances(
+        address owner,
+        address spender,
+        uint256 amount
+    ) internal virtual {
+        uint256 currentAllowance = allowance(owner, spender);
+        if (currentAllowance != type(uint256).max) {
+            require(currentAllowance >= amount, "ERC20: inssuficient allowance");
+            unchecked {
+                _approve(owner, spender, amount);
+            }
+        }
+    }
 }

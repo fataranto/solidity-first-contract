@@ -107,10 +107,42 @@ abstract contract ERC20 is IERC20 {
         return true;
     }
 
+        function _transfer(
+        address from,
+        address to,
+        uint256 amount
+    ) internal virtual {
+        require(from != address(0), "ERC20: transfer from the zero address");
+        require(to != address(0), "ERC20: transfer to the zero address");
+        _beforeTokenTransfer(from, to, amount);
+        uint256 fromBalance = _balances[from];
+        require(fromBalance >= amount, "ERC20: transfer amount exceeds balance");
+        unchecked {
+            _balances[from] = fromBalance - amount;
+        }
+        _balances[to] += amount;
+        emit Transfer(from, to, amount);
+        _afterTokenTransfer(from, to, amount);
+    }
 
+    function _mint(address account, uint amount) internal virtual {
+        require(account != address(0), "ERC20: mint to the zero address");
+        _beforeTokenTransfer(address(0), account, amount);
+        _totalSupply += amount;
+        emit Transfer(address(0), account, amount);
+        _afterTokenTransfer(address(0), account, amount);
+    }
 
-    
-
-
-
+    function _burn(address account, uint256 amount) internal virtual {
+        require(account != address(0), "ERC20: burn from the zero account");
+        _beforeTokenTransfer(account, address(0), amnount);
+        uint256 accountBalance = _balances[account];
+        require(accountBalance >= amount, "ERC20: burn amount exceeds balance");
+        unchecked {
+            _balances[account] = accountBalance - amount;
+        }
+        _totalSupply -= amount;
+        emit Transfer(account, address(0), amount);
+        _afterTokenTransfer(account, address(0), amount);
+    }
 }

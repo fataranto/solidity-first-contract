@@ -289,7 +289,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/b_2_ERC-20-propio.sol": "ERC20"
+			"contracts/ERC20.sol": "ERC20"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -303,12 +303,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/b_2_ERC-20-propio.sol": {
-			"keccak256": "0x669efd8eeffddbb935d3b6c382d9aca1a21102e61d735cd83c408be5807ba8ed",
+		"contracts/ERC20.sol": {
+			"keccak256": "0xda1cfdb503323f23446075833cc92e0118321cec5bffe8b7f841309633a4531e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://43822573c91a4540fabc1e5822a8363874299350d7db51411d4a7bc08cc6f614",
-				"dweb:/ipfs/QmTLxHHvhJQmG3rSuu3LatJ6PCyZ5hZYCYMwubJsf3Evn4"
+				"bzz-raw://44fb2abc42d6c7bdf881cea0ffc03cccee327dead2fcfb3160aa6b56b05f966d",
+				"dweb:/ipfs/QmdES3g9Ef1fP6VvgiRJirXZYLLjeJ2zeMr3bAndYFQJVo"
 			]
 		}
 	},

@@ -6,6 +6,11 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -107,7 +112,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "acount",
+						"name": "account",
 						"type": "address"
 					}
 				],
@@ -117,6 +122,100 @@
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "createTokens",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "decimals",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "substractedValue",
+						"type": "uint256"
+					}
+				],
+				"name": "decreaseAllowance",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "addedValue",
+						"type": "uint256"
+					}
+				],
+				"name": "increaseAllowance",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "symbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
 					}
 				],
 				"stateMutability": "view",
@@ -202,7 +301,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/ERC20.sol": "IERC20"
+			"contracts/customERC20.sol": "customERC20"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -217,11 +316,19 @@
 	},
 	"sources": {
 		"contracts/ERC20.sol": {
-			"keccak256": "0xda1cfdb503323f23446075833cc92e0118321cec5bffe8b7f841309633a4531e",
+			"keccak256": "0x669efd8eeffddbb935d3b6c382d9aca1a21102e61d735cd83c408be5807ba8ed",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://44fb2abc42d6c7bdf881cea0ffc03cccee327dead2fcfb3160aa6b56b05f966d",
-				"dweb:/ipfs/QmdES3g9Ef1fP6VvgiRJirXZYLLjeJ2zeMr3bAndYFQJVo"
+				"bzz-raw://43822573c91a4540fabc1e5822a8363874299350d7db51411d4a7bc08cc6f614",
+				"dweb:/ipfs/QmTLxHHvhJQmG3rSuu3LatJ6PCyZ5hZYCYMwubJsf3Evn4"
+			]
+		},
+		"contracts/customERC20.sol": {
+			"keccak256": "0x6126f7e499a1845ca343dbbb3952e2ff716b242271623963ff393a6691644977",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3ee403e3cc12628a7bb8cb565ef0d0735ad95ac88eb78d3860e02a9e4d13c135",
+				"dweb:/ipfs/Qma2bAWhxNPxwZgX4X8cnk58cfWAkyyGp1fxPFZYaCoFtm"
 			]
 		}
 	},
